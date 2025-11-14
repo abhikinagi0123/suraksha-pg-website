@@ -88,8 +88,8 @@ export default function Home() {
               <div className="flex items-center gap-4 sm:gap-6 mt-6 sm:mt-8">
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 sm:h-5 sm:w-5 fill-yellow-400 text-yellow-400" />
-                  <span className="font-semibold text-sm sm:text-base">4.8/5</span>
-                  <span className="text-xs sm:text-sm text-muted-foreground">(236 reviews)</span>
+                  <span className="font-semibold text-sm sm:text-base">4.3/5</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">(210 reviews)</span>
                 </div>
               </div>
             </motion.div>

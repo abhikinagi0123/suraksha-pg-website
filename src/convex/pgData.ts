@@ -6,6 +6,34 @@ export const getTestimonials = query({
   handler: async (ctx) => {
     return [
       {
+        name: "Praveena Chand",
+        rating: 5,
+        review: "Had very good experience here. The PG was very clean and the food facility is also good but there is no tea available instead we will get milk in the morning. All the rooms are spacious and every other facilities like washing machine, hot water are available.",
+        date: "3 years ago",
+        occupation: "Local Guide"
+      },
+      {
+        name: "Amitha Mohan",
+        rating: 5,
+        review: "I am satisfied with this PG. It is in good location. He is providing good facilities.",
+        date: "4 years ago",
+        occupation: "Resident"
+      },
+      {
+        name: "Anonymous Resident",
+        rating: 5,
+        review: "Good atmosphere healthy food with communication and proper response 💯💯",
+        date: "Recent",
+        occupation: "Resident"
+      },
+      {
+        name: "Anonymous Resident",
+        rating: 5,
+        review: "Best place to stay, good environment and best hygienic food well maintenance.",
+        date: "Recent",
+        occupation: "Resident"
+      },
+      {
         name: "Priya Sharma",
         rating: 5,
         review: "Excellent PG with all amenities. Very safe and clean. The food is homely and delicious. Highly recommended for working women!",
@@ -48,13 +76,6 @@ export const getTestimonials = query({
         occupation: "Content Writer"
       },
       {
-        name: "Ritu Desai",
-        rating: 3,
-        review: "Decent accommodation for the price. The rooms are clean but could use better ventilation. Management is responsive to complaints.",
-        date: "6 months ago",
-        occupation: "Accountant"
-      },
-      {
         name: "Pooja Menon",
         rating: 4,
         review: "Nice place to stay. The food is good and homely. The only issue is limited parking space, but overall a comfortable stay.",
@@ -67,13 +88,6 @@ export const getTestimonials = query({
         review: "Highly satisfied with my stay here. The aunty who manages the place is very caring and the food reminds me of home.",
         date: "1 month ago",
         occupation: "Teacher"
-      },
-      {
-        name: "Neha Gupta",
-        rating: 3,
-        review: "Average experience. The location is good but the rooms are a bit small for double sharing. Food timing could be more flexible.",
-        date: "7 months ago",
-        occupation: "Sales Executive"
       },
       {
         name: "Aishwarya Rao",
@@ -98,7 +112,7 @@ export const getContactInfo = query({
   handler: async (ctx) => {
     return {
       phone: "+91 99809 74192",
-      alternatePhone: "+91 9482835398",
+      alternatePhone: "+91 94828 35398",
       email: "surakshahomespg@gmail.com",
       address: "Rajarajeshwari Nagar, Bangalore - 560098",
       fullAddress: "451/F, 43rd Main Rd, opposite Marappa layout, Bus stop and auto stand, Jnanakshi complex, RR Nagar, Ideal Homes Twp, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098, India",
