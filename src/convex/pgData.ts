@@ -97,11 +97,11 @@ export const getContactInfo = query({
   args: {},
   handler: async (ctx) => {
     return {
-      phone: "+91 9743824684",
+      phone: "+91 99809 74192",
       alternatePhone: "+91 9482835398",
       email: "surakshahomespg@gmail.com",
-      address: "HSR Layout, Bangalore - 560102",
-      fullAddress: "118, Boopathy Mansion, 13th Main, Sector-5, Near Devi Eye Hospital, HSR Layout, Bangalore - 560102",
+      address: "Rajarajeshwari Nagar, Bangalore - 560098",
+      fullAddress: "451/F, 43rd Main Rd, opposite Marappa layout, Bus stop and auto stand, Jnanakshi complex, RR Nagar, Ideal Homes Twp, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098, India",
       coordinates: {
         lat: 12.9298756,
         lng: 77.5206945
