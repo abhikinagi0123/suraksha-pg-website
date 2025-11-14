@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router";
 
 export default function Footer() {
@@ -51,19 +51,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social Media */}
+          {/* Operating Hours */}
           <div>
-            <h3 className="font-semibold mb-4 text-accent">Follow Us</h3>
-            <div className="flex space-x-3">
-              <a href="#" className="p-2 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground cursor-pointer transition-all">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-secondary/10 hover:bg-secondary hover:text-secondary-foreground cursor-pointer transition-all">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="p-2 rounded-full bg-accent/10 hover:bg-accent hover:text-accent-foreground cursor-pointer transition-all">
-                <Twitter className="h-5 w-5" />
-              </a>
+            <h3 className="font-semibold mb-4 text-accent">Operating Hours</h3>
+            <div className="space-y-2 text-sm">
+              <div>
+                <p className="font-semibold text-foreground">Open Daily</p>
+                <p className="text-muted-foreground">6:00 AM - 9:45 PM</p>
+              </div>
+              <div className="mt-3">
+                <p className="font-semibold text-foreground">Visiting Hours</p>
+                <p className="text-muted-foreground">9:00 AM - 7:00 PM</p>
+              </div>
             </div>
           </div>
         </div>
