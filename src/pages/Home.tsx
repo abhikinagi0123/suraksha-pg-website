@@ -70,13 +70,13 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-3 sm:gap-4">
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <a href="tel:+919743824684" className="w-full sm:w-auto">
+                  <a href="tel:+919980974192" className="w-full sm:w-auto">
                     <Button size="lg" className="cursor-pointer w-full">
                       <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                       Book Now
                     </Button>
                   </a>
-                  <a href="https://wa.me/919743824684?text=Hi!%20I'm%20interested%20in%20learning%20more%20about%20Suraksha%20PG." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <a href="https://wa.me/919980974192?text=Hi!%20I'm%20interested%20in%20learning%20more%20about%20Suraksha%20PG." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button size="lg" variant="secondary" className="cursor-pointer w-full">
                       <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                       WhatsApp Us
@@ -201,7 +201,7 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <a href="tel:+919743824684" className="w-full">
+                    <a href="tel:+919980974192" className="w-full">
                       <Button className="w-full cursor-pointer">
                         Book Now
                       </Button>
@@ -283,13 +283,13 @@ export default function Home() {
               Contact us today for a free visit and see why hundreds of women trust Suraksha PG
             </p>
             <div className="flex flex-col gap-3 sm:gap-4 max-w-md mx-auto">
-              <a href="tel:+919743824684" className="w-full">
+              <a href="tel:+919980974192" className="w-full">
                 <Button size="lg" variant="secondary" className="cursor-pointer w-full">
                   <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Call: +91 97438 24684
+                  Call: +91 99809 74192
                 </Button>
               </a>
-              <a href="https://wa.me/919743824684?text=Hi!%20I'm%20interested%20in%20booking%20a%20room%20at%20Suraksha%20PG." target="_blank" rel="noopener noreferrer" className="w-full">
+              <a href="https://wa.me/919980974192?text=Hi!%20I'm%20interested%20in%20booking%20a%20room%20at%20Suraksha%20PG." target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button size="lg" variant="secondary" className="cursor-pointer w-full">
                   <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   WhatsApp Us

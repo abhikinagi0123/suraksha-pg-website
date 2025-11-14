@@ -38,11 +38,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">HSR Layout, Bangalore - 560102</span>
+                <span className="text-muted-foreground">Rajarajeshwari Nagar, Bangalore - 560098</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-secondary" />
-                <a href="tel:+919743824684" className="text-muted-foreground hover:text-secondary cursor-pointer transition-colors">+91 97438 24684</a>
+                <a href="tel:+919980974192" className="text-muted-foreground hover:text-secondary cursor-pointer transition-colors">+91 99809 74192</a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-accent" />
