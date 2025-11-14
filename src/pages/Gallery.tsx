@@ -1,55 +1,28 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
+import { useQuery } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { Loader2 } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Gallery() {
-  const images = [
-    {
-      url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop",
-      title: "Single Room",
-      category: "Rooms",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&h=600&fit=crop",
-      title: "Double Sharing Room",
-      category: "Rooms",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop",
-      title: "Triple Sharing Room",
-      category: "Rooms",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&h=600&fit=crop",
-      title: "Common Area",
-      category: "Common Areas",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
-      title: "Dining Area",
-      category: "Common Areas",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&h=600&fit=crop",
-      title: "Study Area",
-      category: "Common Areas",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&h=600&fit=crop",
-      title: "Kitchen",
-      category: "Facilities",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop",
-      title: "Bathroom",
-      category: "Facilities",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-      title: "Building Exterior",
-      category: "Exterior",
-    },
-  ];
+  const images = useQuery(api.pgData.getGalleryImages);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  if (!images) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
+
+  const categories = ["All", ...Array.from(new Set(images.map(img => img.category)))];
+  const filteredImages = selectedCategory === "All" 
+    ? images 
+    : images.filter(img => img.category === selectedCategory);
 
   return (
     <div className="min-h-screen">
@@ -65,12 +38,30 @@ export default function Gallery() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Gallery
+              Photo Gallery
             </h1>
             <p className="text-lg text-muted-foreground">
-              Take a virtual tour of our facilities and accommodations
+              Take a virtual tour of our facilities, rooms, and accommodations
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-8 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category)}
+                className="cursor-pointer"
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -78,13 +69,13 @@ export default function Gallery() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {images.map((image, index) => (
+            {filteredImages.map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
                 className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
               >
                 <div className="aspect-[4/3] overflow-hidden">
@@ -94,10 +85,11 @@ export default function Gallery() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <p className="text-sm font-medium mb-1">{image.category}</p>
-                    <h3 className="text-lg font-bold">{image.title}</h3>
+                    <p className="text-xs font-medium mb-1 text-primary-foreground/80">{image.category}</p>
+                    <h3 className="text-lg font-bold mb-1">{image.title}</h3>
+                    <p className="text-sm text-primary-foreground/90">{image.description}</p>
                   </div>
                 </div>
               </motion.div>
