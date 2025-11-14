@@ -9,7 +9,7 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo.svg" alt="Suraksha PG" className="h-10 w-10" />
+              <img src="/logo.svg?v=2" alt="Suraksha PG" className="h-10 w-10" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Suraksha PG</span>
                 <span className="text-xs text-muted-foreground">For Ladies</span>

@@ -29,7 +29,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 cursor-pointer group">
             <div className="relative">
-              <img src="/logo.svg" alt="Suraksha PG" className="h-12 w-12 transition-transform group-hover:scale-110" />
+              <img src="/logo.svg?v=2" alt="Suraksha PG" className="h-12 w-12 transition-transform group-hover:scale-110" />
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
             <div className="flex flex-col">
