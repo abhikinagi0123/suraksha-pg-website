@@ -10,6 +10,7 @@ import Location from "@/pages/Location.tsx";
 import Contact from "@/pages/Contact.tsx";
 import AuthPage from "@/pages/Auth.tsx";
 import NotFound from "@/pages/NotFound.tsx";
+import WhatsAppButton from "@/components/WhatsAppButton.tsx";
 import { ConvexAuthProvider } from "@convex-dev/auth/react";
 import { ConvexReactClient } from "convex/react";
 import { StrictMode, useEffect } from "react";
@@ -65,6 +66,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <WhatsAppButton />
         <Toaster />
       </ConvexAuthProvider>
     </InstrumentationProvider>
