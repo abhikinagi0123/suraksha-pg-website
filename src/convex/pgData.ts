@@ -132,8 +132,16 @@ export const getContactInfo = query({
 export const getGalleryImages = query({
   args: {},
   handler: async (ctx) => {
+    // TODO: Replace these placeholder URLs with actual photos of Suraksha PG
+    // Upload real photos through the Assets tab in the dashboard
+    // Recommended: Take high-quality photos of:
+    // - Each room type (single, double, triple sharing)
+    // - Common areas (living room, dining hall, study area)
+    // - Facilities (kitchen, bathrooms, laundry, security systems)
+    // - Building exterior, entrance, and parking
+    
     return [
-      // Rooms
+      // Rooms - Replace with actual room photos
       {
         url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop",
         title: "Single Occupancy Room",
@@ -158,7 +166,7 @@ export const getGalleryImages = query({
         category: "Rooms",
         description: "Well-furnished room with modern amenities"
       },
-      // Common Areas
+      // Common Areas - Replace with actual common area photos
       {
         url: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&h=600&fit=crop",
         title: "Common Living Area",
@@ -183,7 +191,7 @@ export const getGalleryImages = query({
         category: "Common Areas",
         description: "Entertainment area with TV and games"
       },
-      // Facilities
+      // Facilities - Replace with actual facility photos
       {
         url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&h=600&fit=crop",
         title: "Modern Kitchen",
@@ -208,7 +216,7 @@ export const getGalleryImages = query({
         category: "Facilities",
         description: "24/7 CCTV surveillance and biometric access"
       },
-      // Exterior
+      // Exterior - Replace with actual building photos
       {
         url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
         title: "Building Exterior",
