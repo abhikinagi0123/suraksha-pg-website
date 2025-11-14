@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
-import { Award, Heart, Shield, Users, Phone } from "lucide-react";
+import { Award, Heart, Shield, Users, Phone, MessageCircle } from "lucide-react";
 
 export default function About() {
   const values = [
@@ -213,12 +213,20 @@ export default function About() {
             <p className="text-lg mb-8 opacity-90">
               Schedule a visit today and see why we're the preferred choice for women's accommodation
             </p>
-            <a href="tel:+919743824684">
-              <Button size="lg" variant="secondary" className="cursor-pointer">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Us Now
-              </Button>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+919743824684">
+                <Button size="lg" variant="secondary" className="cursor-pointer">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Us Now
+                </Button>
+              </a>
+              <a href="https://wa.me/919743824684?text=Hi!%20I'd%20like%20to%20schedule%20a%20visit%20to%20Suraksha%20PG." target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" className="cursor-pointer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Us
+                </Button>
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

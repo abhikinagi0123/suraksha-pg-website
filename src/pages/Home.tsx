@@ -17,6 +17,7 @@ import {
   Phone,
   MapPin,
   ArrowRight,
+  MessageCircle,
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -67,6 +68,12 @@ export default function Home() {
                   <Button size="lg" className="cursor-pointer w-full sm:w-auto">
                     <Phone className="mr-2 h-5 w-5" />
                     Book Now
+                  </Button>
+                </a>
+                <a href="https://wa.me/919743824684?text=Hi!%20I'm%20interested%20in%20learning%20more%20about%20Suraksha%20PG." target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" variant="secondary" className="cursor-pointer w-full sm:w-auto">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    WhatsApp Us
                   </Button>
                 </a>
                 <Link to="/rooms">
@@ -273,6 +280,12 @@ export default function Home() {
                 <Button size="lg" variant="secondary" className="cursor-pointer w-full sm:w-auto">
                   <Phone className="mr-2 h-5 w-5" />
                   Call: +91 97438 24684
+                </Button>
+              </a>
+              <a href="https://wa.me/919743824684?text=Hi!%20I'm%20interested%20in%20booking%20a%20room%20at%20Suraksha%20PG." target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="secondary" className="cursor-pointer w-full sm:w-auto">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Us
                 </Button>
               </a>
               <Link to="/contact">

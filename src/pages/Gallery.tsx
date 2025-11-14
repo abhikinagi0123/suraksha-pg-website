@@ -112,11 +112,19 @@ export default function Gallery() {
             <p className="text-lg text-muted-foreground mb-8">
               Schedule a visit to experience our facilities in person
             </p>
-            <a href="tel:+919743824684">
-              <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors cursor-pointer">
-                Schedule a Visit
-              </button>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+919743824684">
+                <button className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors cursor-pointer">
+                  Call to Schedule
+                </button>
+              </a>
+              <a href="https://wa.me/919743824684?text=Hi!%20I'd%20like%20to%20schedule%20a%20visit%20to%20see%20the%20facilities." target="_blank" rel="noopener noreferrer">
+                <button className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary/90 transition-colors cursor-pointer flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  WhatsApp Us
+                </button>
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
