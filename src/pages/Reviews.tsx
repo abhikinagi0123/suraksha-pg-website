@@ -11,9 +11,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Reviews() {
   const testimonials = useQuery(api.pgData.getTestimonials);
+  const contactInfo = useQuery(api.pgData.getContactInfo);
   const [filter, setFilter] = useState<"all" | 5 | 4 | 3>("all");
 
-  if (!testimonials) {
+  if (!testimonials || !contactInfo) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <Loader2 className="h-8 w-8 animate-spin" />
@@ -25,7 +26,8 @@ export default function Reviews() {
     ? testimonials 
     : testimonials.filter(t => t.rating === filter);
 
-  const averageRating = (testimonials.reduce((acc, t) => acc + t.rating, 0) / testimonials.length).toFixed(1);
+  const averageRating = contactInfo.googleMapsRating.toFixed(1);
+  const totalReviews = contactInfo.totalReviews;
   const ratingDistribution = {
     5: testimonials.filter(t => t.rating === 5).length,
     4: testimonials.filter(t => t.rating === 4).length,
@@ -75,7 +77,7 @@ export default function Reviews() {
                   />
                 ))}
               </div>
-              <div className="text-sm text-muted-foreground">Based on {testimonials.length} reviews</div>
+              <div className="text-sm text-muted-foreground">Based on {totalReviews} reviews</div>
             </motion.div>
 
             {/* Rating Distribution */}
