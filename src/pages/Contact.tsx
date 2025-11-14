@@ -237,9 +237,9 @@ export default function Contact() {
                         <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold mb-1 text-sm sm:text-base">Visiting Hours</h3>
-                        <p className="text-sm text-muted-foreground">Monday - Sunday</p>
-                        <p className="text-sm text-muted-foreground">9:00 AM - 7:00 PM</p>
+                        <h3 className="font-semibold mb-1 text-sm sm:text-base">Hours</h3>
+                        <p className="text-sm text-muted-foreground">Open Daily: 6:00 AM - 9:45 PM</p>
+                        <p className="text-sm text-muted-foreground">Visiting: 9:00 AM - 7:00 PM</p>
                       </div>
                     </div>
                   </div>

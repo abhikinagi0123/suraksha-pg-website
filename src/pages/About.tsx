@@ -73,17 +73,22 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+                <Heart className="h-5 w-5 text-primary" />
+                <span className="text-sm font-semibold text-primary">Proudly Women-Owned & Operated</span>
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
                 Our Story
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Suraksha PG was founded with a simple yet powerful vision: to provide safe, comfortable, 
-                  and affordable accommodation for working women and students in Bangalore. We understand 
-                  the challenges of finding a trustworthy place to stay in a new city.
+                  and affordable accommodation for working women and students in Bangalore. As a women-owned 
+                  and operated establishment, we truly understand the challenges of finding a trustworthy 
+                  place to stay in a new city.
                 </p>
                 <p>
-                  Located in the prime area of HSR Layout, we offer more than just a room – we provide 
+                  Located in Rajarajeshwari Nagar, we offer more than just a room – we provide 
                   a home away from home. Our facilities are designed keeping in mind the needs of modern 
                   working women who value safety, comfort, and community.
                 </p>
@@ -91,7 +96,7 @@ export default function About() {
                   With years of experience in hospitality and property management, we've created a space 
                   where women can focus on their careers and studies without worrying about their accommodation. 
                   Our commitment to quality, safety, and service has made us one of the most trusted PG 
-                  accommodations in Bangalore.
+                  accommodations in Bangalore, with a 4.3-star rating from over 210 satisfied residents.
                 </p>
               </div>
             </motion.div>

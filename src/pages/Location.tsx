@@ -123,8 +123,9 @@ export default function Location() {
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                       <div>
-                        <p className="font-semibold mb-1">Visiting Hours</p>
-                        <p className="text-sm text-muted-foreground">Monday - Sunday: 9:00 AM - 7:00 PM</p>
+                        <p className="font-semibold mb-1">Operating Hours</p>
+                        <p className="text-sm text-muted-foreground">Open Daily: 6:00 AM - 9:45 PM</p>
+                        <p className="text-xs text-muted-foreground mt-1">Visiting hours: 9:00 AM - 7:00 PM</p>
                       </div>
                     </div>
                   </div>

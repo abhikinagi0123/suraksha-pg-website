@@ -119,7 +119,12 @@ export const getContactInfo = query({
       coordinates: {
         lat: 12.9298756,
         lng: 77.5206945
-      }
+      },
+      operatingHours: "6:00 AM - 9:45 PM (Daily)",
+      visitingHours: "9:00 AM - 7:00 PM",
+      womenOwned: true,
+      googleMapsRating: 4.3,
+      totalReviews: 210
     };
   },
 });
