@@ -1,4 +1,38 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M43.3425 71.9746C40.83 69.3049 22.3495 41.8363 14 28C42.2387 28 74.0844 31.2927 90.072 54.5697C94.2246 60.6157 97.0525 66.9165 99.8804 73.6386C102.708 66.9165 105.536 60.6157 109.689 54.5697C125.676 31.2927 157.522 28 185.761 28L99.8804 171.134L74.1163 129.228C94.1551 110.335 108.468 114.596 115.625 118.89C118.488 111.733 120.125 87.5292 90.5767 86.685C65.5283 85.9693 47.3406 76.2228 43.3425 71.9746Z" fill="#A37FBC"/>
-<ellipse cx="99.255" cy="103.68" rx="3.57633" ry="2.9995" fill="#A37FBC"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield background -->
+  <path d="M256 32L96 96V240C96 368 176 464 256 480C336 464 416 368 416 240V96L256 32Z" fill="url(#gradient1)" stroke="#6B46C1" stroke-width="8"/>
+  
+  <!-- Inner shield detail -->
+  <path d="M256 80L136 128V240C136 344 200 424 256 440C312 424 376 344 376 240V128L256 80Z" fill="url(#gradient2)"/>
+  
+  <!-- House/Home symbol -->
+  <path d="M256 160L176 220V320H216V280H296V320H336V220L256 160Z" fill="white" stroke="#6B46C1" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Roof detail -->
+  <path d="M256 160L336 220H176L256 160Z" fill="#E879F9" opacity="0.6"/>
+  
+  <!-- Door -->
+  <rect x="236" y="280" width="40" height="40" rx="4" fill="#6B46C1"/>
+  
+  <!-- Window -->
+  <rect x="196" y="240" width="24" height="24" rx="2" fill="#38BDF8" opacity="0.8"/>
+  <rect x="292" y="240" width="24" height="24" rx="2" fill="#38BDF8" opacity="0.8"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="256" cy="380" r="8" fill="#E879F9"/>
+  <circle cx="236" cy="360" r="6" fill="#38BDF8" opacity="0.6"/>
+  <circle cx="276" cy="360" r="6" fill="#38BDF8" opacity="0.6"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="256" y1="32" x2="256" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6B46C1"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="gradient2" x1="256" y1="80" x2="256" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
 </svg>
